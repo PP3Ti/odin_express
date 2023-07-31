@@ -6,6 +6,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <ul>
+      <h3>Messages:</h3>
+      <% messages.forEach(item => {%>
+        <li>
+          <%= item.user %> says
+          <br>
+          <%= item.text %>
+        </li>
+      <%})%>
+    </ul>
+    <a href="/new"><button>Send a message!</button></a>
   </body>
 </html>
